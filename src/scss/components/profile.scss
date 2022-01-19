@@ -1,0 +1,156 @@
+
+.profile__image {
+	width: 120px;
+	height: 120px;
+	border: 1px solid $bdColor;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 16px;
+	padding: 5px;
+}
+
+.profile__meta {
+	text-align: center;
+}
+
+.profile__buttons {
+	display: flex;
+	margin-left: -10px;
+	margin-right: -10px;
+	li {
+		flex: 1;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.btn {
+		width: 100%;
+		display: block;
+	}
+	@include max-lg {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 16px;
+		z-index: 997;
+		background-color: #fff;
+		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);; 
+	}
+}
+
+.profile {
+	@include max-lg {
+		margin-bottom: 90px;
+	}
+}
+
+.profile-tabs {
+	.tabs-navi {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		-ms-overflow-style: none; 
+		scrollbar-width: none;  
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	.tabs-navi__tab {
+		white-space: nowrap;
+	}
+}
+
+.profile-message-list {
+	.profile-message-item {
+		&:last-child {
+	
+				margin-bottom: 0;
+				border-bottom: 0;
+				padding-bottom: 0;
+	
+				.profile-message {
+					margin-bottom: 0;
+				}
+		}
+		
+
+	}
+}
+.profile-message-item {
+
+	border-bottom: 1px solid $bdColor;
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+}
+
+.profile-message {
+	display: grid;
+	// width: 100%;
+	grid-template-columns: 36px 1fr;
+	// grid-template-rows: 36px 1fr;
+	column-gap: 20px;
+	row-gap: 16px;
+	grid-template-areas:
+    "icon top-info"
+    "content content";
+	// padding-bottom: 40px;
+	margin-bottom: 40px;
+	&.profile-message_reply {
+		margin-bottom: 0;
+		padding-left: 56px;
+	}
+}
+
+.profile-message__avatar {
+	grid-area: icon;
+}
+
+.profile-message__meta {
+	grid-area: top-info;
+}
+
+.profile-message__detail {
+	grid-area: content;
+	padding-left: 56px;
+}
+
+.profile-message__reply {
+	
+	svg {
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 8px;
+	}
+	margin-top: 20px;
+	display: inline-block;
+	font-weight: 500;
+}
+
+.profile-message__name {
+	font-weight: 500;
+	line-height: 110%;
+	margin-bottom: 6px;
+}
+
+
+.profile-message__date {
+	color: $textgrey;
+	line-height: 110%;
+}
+
+.profile-message__answer {
+	font-size: 16px;
+	margin-bottom: 10px;
+	span {
+		color: $textgrey;
+		display: inline-block;
+		margin-right: 5px;
+	}
+	strong {
+		font-weight: 500;
+	}
+}
+

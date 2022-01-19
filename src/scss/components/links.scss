@@ -1,0 +1,44 @@
+.link-box__name {
+	margin-right: 24px;
+	display: inline-block;
+}
+
+.link-box__link {
+	color: $textgrey;
+}
+
+.link-box {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 10px;
+	.dropdown-menu {
+		min-width: 260px;
+	}
+}
+
+.link-box__drop {
+	margin-left: auto;
+	position: relative;
+}
+
+
+.links__title {
+	margin-bottom: 20px;
+}
+
+.links {
+	.links__list {
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+.links__list {
+	.link-box {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

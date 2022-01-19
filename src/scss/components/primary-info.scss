@@ -1,0 +1,111 @@
+.primary-info-box {
+	padding: 32px 24px 40px 32px;
+	display: flex;
+	align-items: flex-start;
+	@include max-md {
+		display: block;
+		padding: 24px 24px 28px;
+	}
+}
+
+.primary-info {
+	margin-bottom: 44px;
+	@include max-md {
+		margin-bottom: 32px;
+	}
+}
+
+.primary-info-box__icon {
+	margin-right: 32px;
+	margin-bottom: 16px;
+	width: 48px;
+	height: auto;
+	@include max-md {
+		display: block;
+	}
+}
+
+.primary-info-box__title {
+	padding-top: 8px;
+	margin-bottom: 30px;
+	@include max-md {
+		margin-bottom: 24px;
+	}
+}
+
+.primary-info-box__content {
+	flex-grow: 1;
+}
+
+.primary-info-box__list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr) );
+	grid-gap: 24px;
+	flex-wrap: wrap;
+	margin: 0 0 32px;
+	@include max-md {
+		margin: 0 0 10px;
+		display: block;
+		
+	}
+	li {
+		// width: 50%;
+		// flex: 0 0 auto;
+		// margin-bottom: 24px;
+		// padding: 0 12px;
+
+
+		@include max-md {
+			padding: 0;
+			margin: 0 0 16px;
+			flex-grow: 1;
+			width: 100%;
+		}
+		a {
+			text-decoration: none;
+			display: block;
+			color: #333;
+			position: relative;
+			padding-left: 16px;
+			&:hover {
+				color: $textgrey;
+				&::before {
+					background-color: $textgrey;
+				}
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 9px;
+				width: 4px;
+				height: 4px;
+				background-color: $textcolor;
+				border-radius: 2px;
+			}
+		}
+	}
+}
+
+.primary-info-box__more {
+	position: relative;
+	display: inline-block;
+	padding-right: 22px;
+	&::before {
+		content: '';
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.19 2a.629.629 0 0 0-.63.629v9.867l-2.5-2.357c-.234-.25-.685-.257-.917-.007-.236.254-.152.69.052.917L7.757 14.4c.11.103.282.165.432.17.167 0 .31-.055.432-.17l3.562-3.352c.213-.218.288-.67.053-.917-.236-.247-.702-.208-.917.007l-2.501 2.357V2.629A.629.629 0 0 0 8.189 2Z' fill='%23336FEE'/%3E%3C/svg%3E");
+		right: 0;
+		top: 50%;
+		margin-top: -1px;
+		transform: translateY(-50%);
+	}
+	&.active {
+		&::before {
+			transform: translateY(-50%) scaleY(-1);
+		}
+	}
+}
+

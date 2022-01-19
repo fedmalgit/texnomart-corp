@@ -1,0 +1,67 @@
+//- main.home
+//- 	+lazyPicture({
+//- 		src: `${baseDir}images/mem.jpg`,
+//- 		alt: 'Мемчик',
+//- 	}).home__picture#hello
+
+//- 	p.home__text#necessarily
+//- 		| Это стартовый шаблон для верстки!
+//- 		br
+//- 		br
+//- 		| Обязательно посмотри реализацию:
+//- 		br
+//- 		| pug в папке #[code pug/(components|pages)],
+//- 		br
+//- 		| js в папке #[code js/(components|modules|pages)],
+//- 		br
+//- 		| scss в папке #[code scss/(components|pages)]
+//- 		br
+//- 		br
+//- 		| Не используемые части кода/компонентов можно просто отключить (удалять не рекомендуется)
+//- 		br
+//- 		br
+//- 		| Не забывай читать #[a(href="https://github.com/ninelines-team/ninelines-docs" target="_blank") документацию]!
+
+//- 	//- picture.home__picture.home__picture--2#bye
+//- 	+lazyPicture({
+//- 		src: `${baseDir}images/mem-2.jpg`,
+//- 		alt: 'Мемчик 2',
+//- 	}, [
+//- 		{
+//- 			srcset: `${baseDir}images/mem-2.jpg`,
+//- 		}
+//- 	]).home__picture.home__picture--2#bye
+
+
+
+
+
+
+.page-wrapper.inner-page
+	.main-search
+		h2.font-size-24.main-search__title Результаты поиска
+		form.main-search-field
+			input.main-search-field__input.form-control(type='text' placeholder='Поиск')
+			button.main-search-field__btn.btn
+				img(src='images/Icon_search.svg' alt='')
+
+	.results-search
+		.results-search__val
+			| РЕЗУЛЬТАТЫ ПО ЗАПРОСУ “КАК ПОДАТЬ ЗАЯВКУ”
+		.results-list-wrap.box-default.padding-24
+			ul.results-list
+				li.results-list__item 
+					h4.results-list__title.font-size-20
+						| Как подать заявку?
+
+					p
+						| Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. 
+						| Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						| Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.
+				li.results-list__item
+					h4.results-list__title.font-size-20
+						| Как сделать звонок?
+					p
+						| Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. 
+						| Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. 
+						| Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.

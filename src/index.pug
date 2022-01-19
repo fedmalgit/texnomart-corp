@@ -1,0 +1,39 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	//-
+
+block content
+	include pug/data
+
+	.main-wrapper.enter-page(style="background-image: url(images/enter-bg.jpg)")
+		//- include pug/components/header
+		//- .content-wrapper
+		//- 	include pug/pages/leaders
+		//- 	include pug/components/nav-sidebar
+		//- .site__layer
+		.enter-page-center
+
+			.enter-page__logo 
+				img(src='images/texnomart-logo.svg' alt='')
+			.enter-page-quest.padding-40.box-default
+				h2.font-size-24.enter-page-quest__title
+					| ВЫ РАБОТАЕТЕ 
+					span
+						| БОЛЬШЕ МЕСЯЦА?
+				.enter-page-quest__buttons
+					a.btn.btn-block.btn-secondary-outline(href="/home-1.html") 
+						| нет 
+					a.btn.btn-block.btn-secondary-outline(href="/home-2.html") 
+						| да
+
+				img(src="images/chel-new.jpg", alt="").enter-page-quest__image-left
+				img(src="images/chel-full.jpg", alt="").enter-page-quest__image-right
+			
+			
+		//- include pug/components/footer
+
+	//- include pug/components/analytics

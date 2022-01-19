@@ -1,0 +1,46 @@
+.command-item__image {
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	margin-right: 16px;
+	flex-shrink: 0;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+}
+
+.command-item__name {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	margin-bottom: 4px;
+}
+
+.command-item__position {
+	color: $textgrey;
+}
+
+.command-item__link {
+	font-weight: 500;
+	display: inline-block;
+	margin: 16px 0;
+}
+
+.command-group {
+	margin-bottom: 32px;
+}
+
+.command-group__title {
+	margin-bottom: 20px;
+}
+
+.command-group__list {
+	.command-item {
+		&:hot(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+}

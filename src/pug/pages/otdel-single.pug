@@ -1,0 +1,62 @@
+
+.page-wrapper.inner-page
+	h1.font-size-24.inner-page__title.mb-32 Отдел IT
+	.info-box.box-default.padding-24.content
+		h2
+			| Information You Provide
+
+		ul
+			li The types of information that Wiley collects directly from you or through your use of our websites and services may include the following depending on how you interact with Wiley:
+			li Contact details, such as your name, email address, postal address, username, and telephone number;
+			li Internet Protocol (“IP”) addresses used to connect your computer to the Internet;
+			li Educational and professional interests;
+			li Tracking codes such as cookies;
+		p
+			| In order to access certain content and to make use of additional functionality and features of Wiley’s websites and services, we may ask you to register for an account by completing and submitting a registration form, which may request additional information.
+
+	.command
+		.command-group
+			h2.command-group__title.font-size-18 
+				| Руководитель отдела
+			.command-group__list
+				each object, key in data.command[0]
+					.command-item.box-default.padding-16
+						.row.align-items-center
+							.col-md-4.d-flex.command-item__left.align-items-center
+								.command-item__image 
+									img(src=`images/command/img-${key+1}.jpg`, alt="")
+								.command-item__meta
+									.command-item__name=object.name
+									.command-item__position=object.position
+							.col-md-4
+								a(href="#").command-item__link 
+									| udjabbarov@texnomart.uz
+								
+							.col-md-4 
+								a(href="#").command-item__link 
+									| +99897 125 99 44 
+		.command-group
+			h2.command-group__title.font-size-18 
+				| Сотрудники
+			.command-group__list
+				each object, key in data.command[1]
+					.command-item.box-default.padding-16
+						.row.align-items-center
+							.col-md-4.d-flex.command-item__left.align-items-center
+								.command-item__image 
+									img(src=`images/command/img-${key+2}.jpg`, alt="")
+								.command-item__meta
+									.command-item__name=object.name
+									.command-item__position=object.position
+							.col-md-4
+								a(href="#").command-item__link 
+									| udjabbarov@texnomart.uz
+								
+							.col-md-4 
+								a(href="#").command-item__link 
+									| +99897 125 99 44 
+
+
+
+
+

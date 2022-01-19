@@ -1,0 +1,23 @@
+
+.top-quest {
+	margin-bottom: 44px;
+	// @include max-md {
+	// 	margin-bottom: 32px;
+	// }
+}
+
+.top-quest__list {
+	display: flex;
+	flex-wrap: wrap;
+
+	li {
+
+		margin: 0 20px 20px 0;
+		@include max-sm {
+			margin-bottom: 16px;
+			margin-right: 0;
+			flex-grow: 1;
+			width: 100%;
+		}
+	}
+}

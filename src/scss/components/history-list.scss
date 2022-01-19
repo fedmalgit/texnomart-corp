@@ -1,0 +1,39 @@
+.history-link__date {
+	margin-bottom: 16px;
+}
+
+.history-links {
+	.history-link {
+		overflow: hidden;
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+.history-list__link {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.history-list__del {
+	width: 20px;
+	height: 20px;
+	svg {
+		fill: #BABAC0!important; 
+	}
+}
+
+.history-link__list {
+	// background-color: #f7f7f7;
+	margin-bottom: 0;
+	li {
+		&:not(:last-child) {
+			margin-bottom: 12px;
+			padding-bottom: 12px;
+			border-bottom: 1px solid $bdColor;
+		}
+
+	}
+}

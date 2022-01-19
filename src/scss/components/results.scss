@@ -1,0 +1,16 @@
+.results-list {
+	li {
+		&:not(:last-child) {
+			padding-bottom: 16px;
+			margin-bottom: 16px;
+			border-bottom: 1px solid $bdColor;
+		}
+	}
+}
+
+.results-search__val {
+	color: $textgrey;
+	padding-bottom: 16px;
+	border-bottom: 1px solid $bdColor;
+	margin-bottom: 40px;
+}

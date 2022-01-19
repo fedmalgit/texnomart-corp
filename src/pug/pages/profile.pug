@@ -1,0 +1,324 @@
+//- main.home
+//- 	+lazyPicture({
+//- 		src: `${baseDir}images/mem.jpg`,
+//- 		alt: 'Мемчик',
+//- 	}).home__picture#hello
+
+//- 	p.home__text#necessarily
+//- 		| Это стартовый шаблон для верстки!
+//- 		br
+//- 		br
+//- 		| Обязательно посмотри реализацию:
+//- 		br
+//- 		| pug в папке #[code pug/(components|pages)],
+//- 		br
+//- 		| js в папке #[code js/(components|modules|pages)],
+//- 		br
+//- 		| scss в папке #[code scss/(components|pages)]
+//- 		br
+//- 		br
+//- 		| Не используемые части кода/компонентов можно просто отключить (удалять не рекомендуется)
+//- 		br
+//- 		br
+//- 		| Не забывай читать #[a(href="https://github.com/ninelines-team/ninelines-docs" target="_blank") документацию]!
+
+//- 	//- picture.home__picture.home__picture--2#bye
+//- 	+lazyPicture({
+//- 		src: `${baseDir}images/mem-2.jpg`,
+//- 		alt: 'Мемчик 2',
+//- 	}, [
+//- 		{
+//- 			srcset: `${baseDir}images/mem-2.jpg`,
+//- 		}
+//- 	]).home__picture.home__picture--2#bye
+
+
+
+
+
+
+.page-wrapper.inner-page
+	//- h1.font-size-24.inner-page__title.mb-32 Вопросы ответы
+	.profile-tabs.tabs.tabs_line
+		ul.tabs-navi
+
+			li.tabs-navi__li.current_tab
+				a(href="#").tabs-navi__tab.btn.btn-sm
+					| Профиль
+			li.tabs-navi__li
+				a(href="#").tabs-navi__tab.btn.btn-sm
+					| Закрепленная техника
+			li.tabs-navi__li
+				a(href="#").tabs-navi__tab.btn.btn-sm
+					| История поиска
+			li.tabs-navi__li
+				a(href="#").tabs-navi__tab.btn.btn-sm
+					| Мои уведомления
+
+
+		.tabs-content-wrap
+			.tabs-content-wrap__tab.active_tab
+				.profile
+					.row 
+						.col-xxl-4.col-lg-5 
+							.profile__left 
+								.box-default.profile__meta.padding-24
+									.profile__image
+										input.filepond(type='file' data-style-panel-layout="compact", data-image-preview-height="120", data-image-crop-aspect-ratio="1:3", data-image-resize-target-width="120", data-image-resize-target-height="120")
+											//- img(src="images/profile-image.jpg", alt="")
+									.profile__position.font-size-14
+										| Front-end master
+								ul.profile__buttons
+									li 
+										a(href="#").btn.btn-default-outline 
+											| Отмена
+									li 
+										a(href="#").btn.btn-default
+											| Сохранить
+
+						.col-xxl-8.col-lg-7 
+							.box-default.padding-40
+								.form-row
+									.form-input.active
+										input.form-control.form-input__field(type="text" value="Darlene")
+										label.form-input__label
+											| Имя
+											span *
+								.form-row
+									.form-input.active
+										input.form-control.form-input__field(type="text" value="Robertson")
+										label.form-input__label
+											| Фамилия
+											span *
+								.form-row
+									.form-input.active
+										input.form-control.form-input__field(type="text" value="Robertson")
+										label.form-input__label
+											| Отчество
+											span *
+								.form-row
+									.form-input.active
+										input.form-control.form-input__field(type="text" value="+99897 777-77-77")
+										label.form-input__label
+											| Номер телефона
+											span *
+								.form-row
+									.form-input.active
+										input.form-control.form-input__field(type="text" value="example@mail.com")
+										label.form-input__label
+											| Email
+											span *			
+
+			.tabs-content-wrap__tab
+				.box-default.profile-tech.padding-24
+					h2.font-size-24.box-default__title.profile-tech__title
+						| Закрепленная техника
+
+					.accordion.accordion_type-2.accordion_tech
+						.accordion-item
+							.accordion-heading
+								.accordion-heading__left  
+									span.accordion-heading__toggle
+										+svg('small-arrow-down')
+									h3.accordion__title
+										| Ноутбук Lenovo E41-25 81FSS00U00
+								.accordion-heading__right
+									| 1шт.
+
+							.accordion-toggle
+								.accordion-toggle__inner
+									ul.options-list
+										li.option.options-list__item
+											span.option__param 
+												| Тип процессора
+											span.option__znach
+												| Intel Core i5 10400F 2.9 ГГц
+										li.option.options-list__item
+											span.option__param 
+												| Оперативная память (RAM)
+											span.option__znach
+												| 8 ГБ
+										li.option.options-list__item
+											span.option__param 
+												| Графический контроллер
+											span.option__znach
+												| GeForce GTX 1650
+										li.option.options-list__item
+											span.option__param 
+												| Объем видеопамяти
+											span.option__znach
+												| 4 ГБ
+										li.option.options-list__item
+											span.option__param 
+												| Объем SSD
+											span.option__znach
+												| 512 ГБ
+
+
+						.accordion-item
+							.accordion-heading
+								.accordion-heading__left  
+									span.accordion-heading__toggle
+										+svg('small-arrow-down')
+									h3.accordion__title
+										| Монитор HP X27q (2V7U5AA)
+								.accordion-heading__right
+									| 1шт.
+
+							.accordion-toggle
+								.accordion-toggle__inner
+									ul.options-list
+										li.option.options-list__item
+											span.option__param 
+												| Тип процессора
+											span.option__znach
+												| Intel Core i5 10400F 2.9 ГГц
+										li.option.options-list__item
+											span.option__param 
+												| Оперативная память (RAM)
+											span.option__znach
+												| 8 ГБ
+										li.option.options-list__item
+											span.option__param 
+												| Графический контроллер
+											span.option__znach
+												| GeForce GTX 1650
+										li.option.options-list__item
+											span.option__param 
+												| Объем видеопамяти
+											span.option__znach
+												| 4 ГБ
+										li.option.options-list__item
+											span.option__param 
+												| Объем SSD
+											span.option__znach
+												| 512 ГБ
+
+
+			.tabs-content-wrap__tab
+				.box-default.profile-tech.padding-24
+					h2.font-size-24.box-default__title
+						| История поиска
+
+					.history-links
+						.history-link
+							.history-link__date.date
+								+svg('daily').date__icon
+								span.date__text
+									| 08 Августа 2021
+							ul.history-link__list.history-list.box-default.padding-20.bd-radius-8
+								li.history-list__link
+									a(href="#") 
+										| Во сколько обед
+									a(href="#").history-list__del
+										+svg('close') 
+
+								li.history-list__link
+									a(href="#") 
+										| Как выключить компьютер
+									a(href="#").history-list__del
+										+svg('close') 
+						.history-link
+							.history-link__date.date
+								+svg('daily').date__icon
+								span.date__text
+									| 08 Августа 2021
+							ul.history-link__list.history-list.box-default.padding-20.bd-radius-8
+								li.history-list__link
+									a(href="#") 
+										| Во сколько обед
+									a(href="#").history-list__del
+										+svg('close') 
+
+								li.history-list__link
+									a(href="#") 
+										| Как выключить компьютер
+									a(href="#").history-list__del
+										+svg('close') 
+
+			.tabs-content-wrap__tab
+				
+
+					.box-default.profile-message-list.padding-24
+
+						h2.font-size-24.profile-message-list__title.box-default__title
+							| Мои уведомления
+						.profile-message-item
+							.profile-message
+							
+								.profile-message__avatar
+									img(src="images/Frame4066.png", alt="")
+								.profile-message__meta
+									.profile-message__name
+										| Служба поддержки Texnomart
+									.profile-message__date
+										| 20.12.2021
+								.profile-message__detail
+									.profile-message__answer
+										span
+											| Ответ:
+										strong 
+											| Как настроить компьютер?
+									.profile-message__quest
+										p
+											| Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.
+									a(href="#" data-bs-toggle='modal' data-bs-target='#replyModal').profile-message__reply
+										+svg('reply')
+										| Ответить
+
+							.profile-message.profile-message_reply
+							
+								.profile-message__avatar
+									img(src="images/full-photo.jpg", alt="")
+								.profile-message__meta
+									.profile-message__name
+										| Esther Howard
+									.profile-message__date
+										| 20.12.2021
+								.profile-message__detail
+									//- .profile-message__answer
+									//- 	span
+									//- 		| Ответ:
+									//- 	strong 
+									//- 		| Как настроить компьютер?
+									.profile-message__quest
+										p
+											| Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.
+						.profile-message-item
+							.profile-message
+								.profile-message__avatar
+									img(src="images/Frame4066.png", alt="")
+								.profile-message__meta
+									.profile-message__name
+										| Esther Howard
+									.profile-message__date
+										| 20.12.2021
+								.profile-message__detail
+									.profile-message__quest
+										p
+											| Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.
+									a(href="#" data-bs-toggle='modal' data-bs-target='#replyModal').profile-message__reply
+										+svg('reply')
+										| Ответить
+
+
+.modal#replyModal.modal_quest(tabindex='-1' aria-labelledby='Modal' aria-hidden='true')
+	.modal-dialog.modal-dialog-centered
+		.modal-content
+			button.modal-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+				+svg('close')
+			.modal-header
+				h5#modalVerticallyCenteredLabel.modal-title Ваш ответ
+				
+			form(action="#") 
+
+				.form-row
+					.form-input
+						textarea.form-control.form-input__field(type="text" value="")
+						label.form-input__label
+							| Ответ
+							span *
+		
+				.modal-buttons
+					button.btn.btn-default.btn-block 
+						| Отправить 

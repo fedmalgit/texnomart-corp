@@ -1,0 +1,91 @@
+//- main.home
+//- 	+lazyPicture({
+//- 		src: `${baseDir}images/mem.jpg`,
+//- 		alt: 'Мемчик',
+//- 	}).home__picture#hello
+
+//- 	p.home__text#necessarily
+//- 		| Это стартовый шаблон для верстки!
+//- 		br
+//- 		br
+//- 		| Обязательно посмотри реализацию:
+//- 		br
+//- 		| pug в папке #[code pug/(components|pages)],
+//- 		br
+//- 		| js в папке #[code js/(components|modules|pages)],
+//- 		br
+//- 		| scss в папке #[code scss/(components|pages)]
+//- 		br
+//- 		br
+//- 		| Не используемые части кода/компонентов можно просто отключить (удалять не рекомендуется)
+//- 		br
+//- 		br
+//- 		| Не забывай читать #[a(href="https://github.com/ninelines-team/ninelines-docs" target="_blank") документацию]!
+
+//- 	//- picture.home__picture.home__picture--2#bye
+//- 	+lazyPicture({
+//- 		src: `${baseDir}images/mem-2.jpg`,
+//- 		alt: 'Мемчик 2',
+//- 	}, [
+//- 		{
+//- 			srcset: `${baseDir}images/mem-2.jpg`,
+//- 		}
+//- 	]).home__picture.home__picture--2#bye
+
+
+
+
+
+
+.page-wrapper.inner-page
+	h1.font-size-24.inner-page__title.mb-32 Закладки
+
+	.links.box-default.padding-24
+		.links__list 
+			h2.links__title.font-size-18
+				| Интересные сайты
+
+			each object, key in data.links[0]
+
+				.link-box 
+					a(href="#") 
+						span.link-box__name=object.name
+						span.link-box__link=object.path
+					
+					.dropstar.link-box__drop
+						button.drop-toggler(type='button' data-bs-toggle='dropdown' aria-expanded='false') 
+							+svg("dots")
+						ul.dropdown-menu.dropdown-menu-end
+							li
+								a.dropdown-item(href='#') 
+									+svg("edit")
+									| Изменить
+							li
+								a.dropdown-item(href='#') 
+									+svg("delete")
+									| Удалить
+
+
+		.links__list 
+			h2.links__title.font-size-18
+				| Интересные сайты
+			each object, key in data.links[1]
+
+				.link-box 
+
+					a(href="#") 
+						span.link-box__name=object.name
+						span.link-box__link=object.path
+					
+					.dropstar.link-box__drop
+						button.drop-toggler(type='button' data-bs-toggle='dropdown' aria-expanded='false') 
+							+svg("dots")
+						ul.dropdown-menu.dropdown-menu-end
+							li
+								a.dropdown-item(href='#') 
+									+svg("edit")
+									| Изменить
+							li
+								a.dropdown-item(href='#') 
+									+svg("delete")
+									| Удалить

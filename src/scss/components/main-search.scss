@@ -1,0 +1,33 @@
+.main-search-field {
+	display: flex;
+	border: 2px solid $accent;
+	border-radius: 8px;
+	background-color: #fff;
+	margin-bottom: 48px;
+
+	@include max-md {
+		margin-bottom: 40px;
+	}
+}
+
+.main-search-field__input {
+	position: relative;
+	width: 1%;
+	min-width: 0;
+	flex: 1 1 auto;
+	border: 0!important;
+	border-radius: 8px;
+	overflow: hidden;
+	padding-left: 20px;
+}
+
+.main-search-field__btn {
+	padding: 0 12px;
+	display: flex;
+	align-items: center;
+	background-color: transparent;
+}
+
+.main-search__title {
+	margin-bottom: 10px;
+}

@@ -1,0 +1,129 @@
+// RESPONSIVE MEDIA MIXINS START
+
+  // Media max-width
+
+    // @include max-m
+    $max-m-width: 320px;
+    // @include max-xs
+    $max-xs-width: 480px;
+    // @include max-sm
+    $max-sm-width: 575px;
+    // @include max-md
+    $max-md-width: 767px;
+    // @include max-lg
+    $max-lg-width: 991px;
+    // @include max-xl
+    $max-xl-width: 1199px;
+    // @include max-1300
+    $max-1300-width: 1300px;
+    // @include max-1400
+    $max-1400-width: 1400px;
+    // @include max-1500
+    $max-1500-width: 1500px;
+    // @include max-1600
+    $max-1600-width: 1600px;
+    // @include max-1700
+    $max-1700-width: 1700px;
+
+    @mixin max-1700 {
+      @media (max-width: #{$max-1700-width}) {
+        @content;
+      }
+    } 
+    @mixin max-1600 {
+      @media (max-width: #{$max-1600-width}) {
+        @content;
+      }
+    }
+    @mixin max-1500 {
+      @media (max-width: #{$max-1500-width}) {
+        @content;
+      }
+    }
+    @mixin max-1400 {
+      @media (max-width: #{$max-1400-width}) {
+        @content;
+      }
+    }
+    @mixin max-1300 {
+      @media (max-width: #{$max-1300-width}) {
+        @content;
+      }
+    }
+    @mixin max-xl {
+      @media (max-width: #{$max-xl-width}) {
+        @content;
+      }
+    }
+    @mixin max-lg {
+      @media (max-width: #{$max-lg-width}) {
+        @content;
+      }
+    }
+    @mixin max-md {
+      @media (max-width: #{$max-md-width}) {
+        @content;
+      }
+    }
+    @mixin max-sm {
+      @media (max-width: #{$max-sm-width}) {
+        @content;
+      }
+    }
+    @mixin max-xs {
+      @media (max-width: #{$max-xs-width}) {
+        @content;
+      }
+    }
+    @mixin max-m {
+      @media (max-width: #{$max-m-width}) {
+        @content;
+      }
+    }
+
+  // Media min-width
+
+    // @include min-m
+    $min-m-width: 320px;
+    // @include min-xs
+    $min-xs-width: 480px;
+    // @include min-sm
+    $min-sm-width: 576px;
+    // @include min-md
+    $min-md-width: 768px;
+    // @include min-lg
+    $min-lg-width: 992px;
+    // @include min-xl
+    $min-xl-width: 1200px;
+
+    @mixin min-xl {
+      @media (min-width: #{$min-xl-width}) {
+        @content;
+      }
+    }
+    @mixin min-lg {
+      @media (min-width: #{$min-lg-width}) {
+        @content;
+      }
+    }
+    @mixin min-md {
+      @media (min-width: #{$min-md-width}) {
+        @content;
+      }
+    }
+    @mixin min-sm {
+      @media (min-width: #{$min-sm-width}) {
+        @content;
+      }
+    }
+    @mixin min-xs {
+      @media (min-width: #{$min-xs-width}) {
+        @content;
+      }
+    }
+    @mixin min-m {
+      @media (min-width: #{$min-m-width}) {
+        @content;
+      }
+    }
+// RESPONSIVE MEDIA MIXINS END

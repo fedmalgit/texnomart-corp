@@ -1,0 +1,259 @@
+//- main.home
+//- 	+lazyPicture({
+//- 		src: `${baseDir}images/mem.jpg`,
+//- 		alt: 'Мемчик',
+//- 	}).home__picture#hello
+
+//- 	p.home__text#necessarily
+//- 		| Это стартовый шаблон для верстки!
+//- 		br
+//- 		br
+//- 		| Обязательно посмотри реализацию:
+//- 		br
+//- 		| pug в папке #[code pug/(components|pages)],
+//- 		br
+//- 		| js в папке #[code js/(components|modules|pages)],
+//- 		br
+//- 		| scss в папке #[code scss/(components|pages)]
+//- 		br
+//- 		br
+//- 		| Не используемые части кода/компонентов можно просто отключить (удалять не рекомендуется)
+//- 		br
+//- 		br
+//- 		| Не забывай читать #[a(href="https://github.com/ninelines-team/ninelines-docs" target="_blank") документацию]!
+
+//- 	//- picture.home__picture.home__picture--2#bye
+//- 	+lazyPicture({
+//- 		src: `${baseDir}images/mem-2.jpg`,
+//- 		alt: 'Мемчик 2',
+//- 	}, [
+//- 		{
+//- 			srcset: `${baseDir}images/mem-2.jpg`,
+//- 		}
+//- 	]).home__picture.home__picture--2#bye
+
+
+
+
+
+
+.page-wrapper
+	.main-search( data-intro="Задавайте рабочие вопросы")
+		h2.font-size-24.main-search__title Чем мы можем вам помочь?
+		form.main-search-field
+			input.main-search-field__input.form-control(type='text' placeholder='Поиск')
+			button.main-search-field__btn.btn
+				img(src='images/Icon_search.svg' alt='')
+	.primary-info
+		.primary-info-box.box-default(data-intro="Шаг 1 ✨")
+			img.primary-info-box__icon(src='images/setting.svg' alt='')
+			.primary-info-box__content
+				h3.primary-info-box__title.font-size-24 Настройки
+				ul.primary-info-box__list
+					li
+						a(href='|') What Is Leadership
+					li
+						a(href='|') Team Management Skills
+					li
+						a(href='|') Vulnerable Leadership: The Power of Opening Up
+					li
+						a(href='|') How To Build Your Personal Resilience
+					li
+						a(href='|') How Good Is Your Problem Solving?
+					li
+						a(href='|') Planning for a Crisis
+					li
+						a(href='|') What Is Leadership
+					li
+						a(href='|') Team Management Skills
+					li
+						a(href='|') Vulnerable Leadership: The Power of Opening Up
+
+				a.primary-info-box__more(href='#')
+					| Еще
+		.primary-info-box.box-default(data-intro="Шаг 2  ✨")
+			img.primary-info-box__icon(src='images/link.svg' alt='')
+			.primary-info-box__content
+				h3.primary-info-box__title.font-size-24 Полезные ссылки
+				ul.primary-info-box__list
+					li
+						a(href='|') What Is Leadership
+					li
+						a(href='|') Team Management Skills
+					li
+						a(href='|') Vulnerable Leadership: The Power of Opening Up
+					li
+						a(href='|') How To Build Your Personal Resilience
+					li
+						a(href='|') How Good Is Your Problem Solving?
+					li
+						a(href='|') Planning for a Crisis
+					li
+						a(href='|') What Is Leadership
+					li
+						a(href='|') Team Management Skills
+					li
+						a(href='|') Vulnerable Leadership: The Power of Opening Up
+
+				a.primary-info-box__more(href='#')
+					| Еще
+		.primary-info-box.box-default(data-intro="Шаг 3  ✨")
+			img.primary-info-box__icon(src='images/doc.svg' alt='')
+			.primary-info-box__content
+				h3.primary-info-box__title.font-size-24 Complete Geography Exam Skills 1
+				ul.primary-info-box__list
+					li
+						a(href='|') What Is Leadership
+					li
+						a(href='|') Team Management Skills
+					li
+						a(href='|') Vulnerable Leadership: The Power of Opening Up
+					li
+						a(href='|') How To Build Your Personal Resilience
+					li
+						a(href='|') How Good Is Your Problem Solving?
+					li
+						a(href='|') Planning for a Crisis
+					li
+						a(href='|') What Is Leadership
+					li
+						a(href='|') Team Management Skills
+					li
+						a(href='|') Vulnerable Leadership: The Power of Opening Up
+
+
+
+				a.primary-info-box__more(href='#')
+					| Еще
+	.top-quest
+		h2.font-size-24.mb-40.top-quest__title Топ 10 вопросов
+		ul.top-quest__list
+			li
+				a.chips-xxl(href='#' data-bs-toggle='modal' data-bs-target='#contentModal') How can you cut an onion without crying?
+			li
+				a.chips-xxl(href='#' data-bs-toggle='modal' data-bs-target='#contentModal') The More Important the Work, the More Important the Rest
+			li
+				a.chips-xxl(href='#' data-bs-toggle='modal' data-bs-target='#contentModal') How can you cut an onion without crying?
+			li
+				a.chips-xxl(href='#' data-bs-toggle='modal' data-bs-target='#contentModal') Reminder - Activelearn and writing
+			li
+				a.chips-xxl(href='#' data-bs-toggle='modal' data-bs-target='#contentModal') Как подать заявку?
+			li
+				a.chips-xxl(href='#' data-bs-toggle='modal' data-bs-target='#contentModal') Table Tennis Rules Assignment
+			li
+				a.chips-xxl(href='#' data-bs-toggle='modal' data-bs-target='#contentModal') Complete one TQE Paragraph for question 2 paper 1
+			li
+				a.chips-xxl(href='#' data-bs-toggle='modal' data-bs-target='#contentModal') Macbeth- Extract 4
+			li
+				a.chips-xxl(href='#' data-bs-toggle='modal' data-bs-target='#contentModal') Leylandii and its problems
+			li
+				a.chips-xxl(href='#' data-bs-toggle='modal' data-bs-target='#contentModal') Revise the numbers from 1 to 100
+	.interes-accordion.mb-64
+		h2.font-size-24.mb-40.interes-accordion__title Возможно вас интересует
+		include ../../pug/components/accordion
+
+
+
+	.courses
+		h2.font-size-24.courses__title.mb-40 Обучающие курсы
+		.courses-carousel
+			.courses-carousel__item 
+				.course-box
+					.course-box__image
+						a(href="#") 
+							img(src='images/course-1.webp' alt='')
+					.course-box__info
+						h3.course-box__title 
+							a(href="#") 
+								| Кассир
+					a.course-box__link(href='#')
+						span Подробнее
+						+svg("link-arr-2")
+			.courses-carousel__item 
+				.course-box
+					.course-box__image
+						a(href="#") 
+							img(src='images/course-2.webp' alt='')
+					.course-box__info
+						h3.course-box__title 
+							a(href="#") 
+								| Кассир
+					a.course-box__link(href='#')
+						span Подробнее
+						+svg("link-arr-2")
+			.courses-carousel__item 
+				.course-box
+					.course-box__image
+						a(href="#") 
+							img(src='images/course-3.webp' alt='')
+					.course-box__info
+						h3.course-box__title 
+							a(href="#") 
+								| Менеджер
+					a.course-box__link(href='#')
+						span Подробнее
+						+svg("link-arr-2")
+			.courses-carousel__item 
+				.course-box
+					.course-box__image
+						img(src='images/course-1.webp' alt='')
+					.course-box__info
+						h3.course-box__title 
+							a(href="#") 
+								| Продавец консультант
+					a.course-box__link(href='#')
+						span Подробнее
+						+svg("link-arr-2")
+
+		.carousel-arrows
+			.carousel-arrow.carousel-arrow-prev
+				
+			.carousel-arrow.carousel-arrow-next
+
+
+
+.modal#contentModal.modal_content(tabindex='-1' aria-labelledby='contentModal' aria-hidden='true')
+	.modal-dialog.modal-dialog-centered.modal-dialog-scrollable
+		.modal-content
+			button.modal-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+				+svg("close")
+			.modal-header
+				h5#modalVerticallyCenteredLabel.modal-title Задать свой вопрос
+			.modal-body.content
+				p
+					| The types of information that Wiley collects directly from you or through your use of our 
+					| websites and services may include the following depending on how you interact with Wiley:
+				ul
+					li
+						| Contact details, such as your name, email address, postal address, username, and telephone number;
+					li
+						| Internet Protocol (“IP”) addresses used to connect your computer to the Internet;
+					li
+						| Educational and professional interests;
+					li
+						| Tracking codes such as cookies;
+					li
+						| Donec sed erat ut magna suscipit mattis. Aliquam erat volutpat. Morbi in orci risus.
+					li
+						| Donec pretium fringilla blandit. Etiam ut accumsan leo. Aliquam id mi quam. 
+				p
+					| Vivamus dictum ut erat nec congue. Etiam facilisis lacus ut arcu vulputate, 
+					| non pellentesque sem convallis. Proin tempus sapien nisl, nec varius risus 
+					| tristique a. Etiam ligula lacus, ultricies at cursus id, fringilla nec nulla. 
+					| Fusce pretium laoreet diam a mollis. In finibus purus sed tortor fringilla, 
+					| eu luctus lorem sodales.Ut dignissim ante ac augue vulputate tristique. 
+					| Mauris venenatis tincidunt nibh, sit amet fringilla augue malesuada a. 
+					| Mauris a nunc congue, viverra lectus sed, imperdiet quam. Aenean tempor 
+					| sem sed lorem ultricies lacinia. Sed sit amet tortor nibh. Donec condimentum 
+					| posuere nunc, et hendrerit sapien dictum ut. Aliquam congue non purus eu suscipit. 
+					| Integer eu dui tortor. Donec ut dolor vitae ipsum ultrices semper. Morbi imperdiet 
+					| dictum urna nec blandit. Curabitur interdum diam ut porta vulputate. Fusce
+					| ultrices efficitur lectus et ornare. Morbi vulputate condimentum metus eu
+					| viverra. Integer iaculis volutpat lobortis. In dapibus massa at molestie 
+					| ultricies. Nunc vitae gravida ipsum, euismod euismod nulla. Morbi at nibh 
+					| ut orci fringilla luctus. Nunc diam dolor, posuere a venenatis et, venenatis 
+					| nec augue. Phasellus tempus mauris non metus placerat, id consectetur quam porta. 
+					| Proin pulvinar consequat urna, et porttitor leo maximus sed. Ut condimentum 
+					| massa ut turpis consectetur aliquam. Maecenas vehicula magna quis malesuada 
+					| feugiat. Fusce pharetra eros id odio vestibulum, quis mollis est tempor. 
+					| Etiam sed purus orci. Nullam sit amet tortor eget.

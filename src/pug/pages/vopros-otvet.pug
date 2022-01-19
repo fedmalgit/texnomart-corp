@@ -1,0 +1,22 @@
+
+.page-wrapper.inner-page
+	h1.font-size-24.inner-page__title.mb-32 Вопросы ответы
+	.ques-answ.tabs_button.tabs
+		ul.tabs-navi
+			each object, key in data.tabsAnswer
+				li.tabs-navi__li(class=(object.current) ? 'current_tab' : '')
+					a(href="#").tabs-navi__tab.btn.btn-sm=object.tab
+					
+		.tabs-content-wrap
+			.tabs-content-wrap__tab.active_tab
+				include ../../pug/components/accordion
+			.tabs-content-wrap__tab 
+				include ../../pug/components/accordion
+			.tabs-content-wrap__tab 
+				include ../../pug/components/accordion
+
+			.tabs-content-wrap__tab 
+				include ../../pug/components/accordion 
+			.tabs-content-wrap__tab 
+				include ../../pug/components/accordion
+

@@ -1,0 +1,47 @@
+
+.form-input {
+	position: relative;
+	&.active {
+		label {
+			background-color: #fff;
+			padding: 0 6px;
+			top: -6px;
+			left: 12px;
+		}
+	}
+}
+
+.form-input__label {
+	position: absolute;
+	top: 14px;
+	left: 20px;
+	transition: all .3s ease-in-out;
+	pointer-events: none;
+	font-size: 13px;
+	line-height: 16px;
+	pointer-events: none;
+	color: $textgrey;
+	span {
+		color: $accent;
+		display: inline-block;
+		padding-left: 4px;
+	}
+}
+
+.form-control {
+	height: 44px;
+	border: 1px solid #D5D8DF;
+	border-radius: 8px;
+	box-shadow: none!important;
+}
+
+.form-row {
+	width: 100%;
+	& + .form-row {
+		margin-top: 28px;
+	}
+}
+
+textarea.form-control {
+	height: 110px;
+}

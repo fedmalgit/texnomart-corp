@@ -1,0 +1,44 @@
+.file-box {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border: 1px solid $bdColor;
+	margin-bottom: 20px;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	&:hover {
+		// border-color: $accent;
+		background-color: #f7f7f7;
+		// box-shadow: 0 3px 20px 0 rgba($accent, .4);
+	}
+}
+
+.file-box__icon {
+	width: 40px;
+	height: 40px;
+	border-radius: 8px;
+	background-color: rgba($accent, .3);
+	margin-right: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.file-box__title {
+	font-size: 14px;
+	font-weight: 500;
+	color: $textcolor;
+	margin: 16px 0;
+}
+
+.files {
+	.file-box {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

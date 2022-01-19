@@ -1,0 +1,77 @@
+nav.nav-sidebar
+	ul.nav-sidebar-list
+		li
+			a(href='/home-2.html')
+				img(src='images/home.svg' alt='')
+				span
+					| Главная
+		li
+			a(href='#')
+				img(src='images/company.svg' alt='')
+				span
+					| О компании
+		li
+			a(href='/reglament.html')
+				img(src='images/pravila.svg' alt='')
+				span
+					| Регламент и правила
+		li
+			a(href='/otdel.html')
+				img(src='images/otdel.svg' alt='')
+				span
+					| Отделы
+		li
+			a(href='/vopros-otvet.html')
+				img(src='images/quest.svg' alt='')
+				span
+					| Вопрос ответ
+		li
+			a(href='/contacts.html')
+				img(src='images/phone.svg' alt='')
+				span
+					| Контакты
+	.question-link
+		img.question-link__icon(src='images/questions_1195.svg' alt='')
+		.question-link__text
+			span
+				| Не нашли что искали?
+			|	Задайте вопрос в службу поддержки
+		a.btn.btn-sm.btn-default(href='#' data-bs-toggle='modal' data-bs-target='#questModal') 
+			| Задать вопрос
+
+
+
+.modal#questModal.modal_quest(tabindex='-1' aria-labelledby='questModal' aria-hidden='true')
+	.modal-dialog.modal-dialog-centered
+		.modal-content
+			button.modal-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+				+svg('close')
+			.modal-header
+				h5#modalVerticallyCenteredLabel.modal-title Задать свой вопрос
+				
+			form(action="#") 
+				.form-row
+					.form-input
+						input.form-control.form-input__field(type="text" value="")
+						label.form-input__label
+							| Введите имя и фамилию
+							span *
+				.form-row
+					.form-input
+						input.form-control.form-input__field(type="text" value="")
+						label.form-input__label
+							| Email 
+							span *
+				.form-row
+					.form-input
+						textarea.form-control.form-input__field(type="text" value="")
+						label.form-input__label
+							| Ваш вопрос
+							span *
+		
+				.modal-buttons
+					button.btn.btn-default.btn-block 
+						| Отправить вопрос
+
+
+

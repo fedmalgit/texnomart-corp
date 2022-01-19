@@ -1,0 +1,169 @@
+//- main.home
+//- 	+lazyPicture({
+//- 		src: `${baseDir}images/mem.jpg`,
+//- 		alt: 'Мемчик',
+//- 	}).home__picture#hello
+
+//- 	p.home__text#necessarily
+//- 		| Это стартовый шаблон для верстки!
+//- 		br
+//- 		br
+//- 		| Обязательно посмотри реализацию:
+//- 		br
+//- 		| pug в папке #[code pug/(components|pages)],
+//- 		br
+//- 		| js в папке #[code js/(components|modules|pages)],
+//- 		br
+//- 		| scss в папке #[code scss/(components|pages)]
+//- 		br
+//- 		br
+//- 		| Не используемые части кода/компонентов можно просто отключить (удалять не рекомендуется)
+//- 		br
+//- 		br
+//- 		| Не забывай читать #[a(href="https://github.com/ninelines-team/ninelines-docs" target="_blank") документацию]!
+
+//- 	//- picture.home__picture.home__picture--2#bye
+//- 	+lazyPicture({
+//- 		src: `${baseDir}images/mem-2.jpg`,
+//- 		alt: 'Мемчик 2',
+//- 	}, [
+//- 		{
+//- 			srcset: `${baseDir}images/mem-2.jpg`,
+//- 		}
+//- 	]).home__picture.home__picture--2#bye
+
+
+
+
+
+
+.page-wrapper.inner-page
+	h2.font-size-24.inner-page__title.mb-32 Отделы
+
+	.row.otdel-list.grid-gutter-20
+		each object, key in data.otdeli
+			.col-xl-6.col-12.grid-gutter-20__col
+				.otdel-box.box-default
+					h3.otdel-box__name 
+						a(href="#")=object.name
+					.otdel-box__count.font-size-14
+						| Количество сотрудников
+						span=object.count
+							
+
+					.otdel-box__bottom 
+						.otdel-box__stack
+							.otdel-box__avatar.avatar.avatar-sm.otdel-box_lead
+								a(href="#" data-bs-target='#profile-detail-carousel' data-bs-slide-to='2' data-bs-toggle='modal') 
+									img(src="images/avatars/img-1.jpg", alt="")
+							.otdel-box__avatar.avatar.avatar-sm
+								a(href="#" data-bs-target='#profile-detail-carousel' data-bs-slide-to='1' data-bs-toggle='modal') 
+									img(src="images/avatars/img-2.jpg", alt="")
+							.otdel-box__avatar.avatar.avatar-sm
+								a(href="#" data-bs-target='#profile-detail-carousel' data-bs-slide-to='2' data-bs-toggle='modal')
+									img(src="images/avatars/img-3.jpg", alt="")
+							.otdel-box__avatar.avatar.avatar-sm
+								a(href="#" data-bs-target='#profile-detail-carousel' data-bs-slide-to='3' data-bs-toggle='modal')
+									img(src="images/avatars/img-4.jpg", alt="")
+							.otdel-box__avatar.avatar.avatar-sm
+								a(href="#" data-bs-target='#profile-detail-carousel' data-bs-slide-to='2' data-bs-toggle='modal')
+									img(src="images/avatars/img-5.jpg", alt="")
+							.otdel-box__avatar.avatar.avatar-sm
+								|+4
+						a(href="/otdel-single.html").btn.btn-default-outline.btn-sm.otdel-box__btn
+							| Подробнее
+
+
+			
+	//- button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#exampleModal') Launch demo modal
+	// Modal
+
+
+				<div class="mbr-slider modal carousel-fade fade carousel slide lazy" id="lb-gallery-1" data-interval="false" data-ride="carousel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-body">
+								<div class="carousel-inner" role="listbox">
+									<div class="carousel-item active"><img src="images/adventor.jpg" alt=""></div>
+									<div class="carousel-item"><img src="" data-lazy-load-src="images/resto.jpg" alt=""></div>
+									<div class="carousel-item"><img src="" data-lazy-load-src="images/ca-2x.jpg" alt=""></div>
+								</div><a class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="#lb-gallery-1"></a><a class="carousel-control carousel-control-next" role="button" data-slide="next" href="#lb-gallery-1"></a><a class="close" href="#" role="button" data-dismiss="modal"><span class="icon-close"></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+	#profile-detail-carousel.modal.profile-detail-miodal.fade.profile-detail-carousel.carousel.slide(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true' data-bs-ride='carousel' data-bs-interval="false")
+		.modal-dialog
+			.modal-content
+					button.modal-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+						+svg("close")
+	
+					.carousel-inner
+						.carousel-item.active
+							.profile-detail
+								.profile-detail__image
+									img(src='images/full-photo.jpg' alt='...')
+								h3.profile-detail__name.font-size-24
+									| Миржалол Мирхомитов
+								.profile-detail__position.font-size-16.font-weight-500
+									| Front-end master
+								.profile-detail__time.font-size-14
+									| Пн-Пт(09:00 - 18:00)
+								ul.profile-detail__contacts
+									li
+										span
+											| тел.: 
+										a(href="tel:+99897 125 99 44") +99897 125 99 44
+									li
+										span
+											| email:
+										a(href="mailto: example@mail.com ") example@mail.com
+
+						.carousel-item
+							.profile-detail
+								.profile-detail__image
+									img(src='images/full-photo.jpg' alt='...')
+								h3.profile-detail__name.font-size-24
+									| Миржалол Мирхомитов 2
+								.profile-detail__position.font-size-16.font-weight-500
+									| Front-end master
+								.profile-detail__time.font-size-14
+									| Пн-Пт(09:00 - 18:00)
+								ul.profile-detail__contacts
+									li
+										span
+											| тел.: 
+										a(href="tel:+99897 125 99 44") +99897 125 99 44
+									li
+										span
+											| email:
+										a(href="mailto: example@mail.com ") example@mail.com
+						.carousel-item
+							.profile-detail
+								.profile-detail__image
+									img(src='images/full-photo.jpg' alt='...')
+								h3.profile-detail__name.font-size-24
+									| Миржалол Мирхомитов 3
+								.profile-detail__position.font-size-16.font-weight-500
+									| Front-end master
+								.profile-detail__time.font-size-14
+									| Пн-Пт(09:00 - 18:00)
+								ul.profile-detail__contacts
+									li
+										span
+											| тел.: 
+										a(href="tel:+99897 125 99 44") +99897 125 99 44
+									li
+										span
+											| email:
+										a(href="mailto: example@mail.com ") example@mail.com
+					button.carousel-control-prev(type='button' data-bs-target='#profile-detail-carousel' data-bs-slide='prev')
+						span.carousel-control-prev-icon(aria-hidden='true')
+						span.visually-hidden Предыдущий
+					button.carousel-control-next(type='button' data-bs-target='#profile-detail-carousel' data-bs-slide='next')
+						span.carousel-control-next-icon(aria-hidden='true')
+						span.visually-hidden Следующий
+
+

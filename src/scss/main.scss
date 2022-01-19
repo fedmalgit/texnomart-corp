@@ -1,0 +1,42 @@
+// stylelint-disable at-rule-empty-line-before
+
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "sprites";
+@import "fonts";
+@import "vendor";
+@import "media";
+@import "base";
+@import "helpers";
+
+@import "components/form";
+@import "components/buttons";
+@import "components/header";
+@import "components/accordion";
+@import "components/tabs";
+@import "components/contact-box";
+@import "components/course-box";
+@import "components/leader-box";
+@import "components/main-search";
+@import "components/otdel-box";
+@import "components/profile-image";
+@import "components/sidebar";
+@import "components/links";
+@import "components/modal";
+@import "components/primary-info";
+@import "components/profile-detail";
+@import "components/profile";
+@import "components/profile-image";
+@import "components/command";
+@import "components/carousel";
+@import "components/files";
+
+@import "components/sections";
+@import "components/results";
+@import "components/quest";
+@import "components/history-list";
+@import "components/date";
+@import "components/footer";
+
+@import "pages/home";

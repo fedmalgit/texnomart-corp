@@ -1,0 +1,63 @@
+//- main.home
+//- 	+lazyPicture({
+//- 		src: `${baseDir}images/mem.jpg`,
+//- 		alt: 'Мемчик',
+//- 	}).home__picture#hello
+
+//- 	p.home__text#necessarily
+//- 		| Это стартовый шаблон для верстки!
+//- 		br
+//- 		br
+//- 		| Обязательно посмотри реализацию:
+//- 		br
+//- 		| pug в папке #[code pug/(components|pages)],
+//- 		br
+//- 		| js в папке #[code js/(components|modules|pages)],
+//- 		br
+//- 		| scss в папке #[code scss/(components|pages)]
+//- 		br
+//- 		br
+//- 		| Не используемые части кода/компонентов можно просто отключить (удалять не рекомендуется)
+//- 		br
+//- 		br
+//- 		| Не забывай читать #[a(href="https://github.com/ninelines-team/ninelines-docs" target="_blank") документацию]!
+
+//- 	//- picture.home__picture.home__picture--2#bye
+//- 	+lazyPicture({
+//- 		src: `${baseDir}images/mem-2.jpg`,
+//- 		alt: 'Мемчик 2',
+//- 	}, [
+//- 		{
+//- 			srcset: `${baseDir}images/mem-2.jpg`,
+//- 		}
+//- 	]).home__picture.home__picture--2#bye
+
+
+
+
+
+
+.page-wrapper.inner-page
+	h2.font-size-24.inner-page__title.mb-32 Контакты  
+	.row.contact-list.grid-gutter-20
+		each object, key in data.contacts
+			.col-xxl-4.co-xl-6.col-sm-6.grid-gutter-20__col
+				.contact-box.box-default
+					.contact-box__top 
+						.contact-box__image
+							img(src=`images/contacts/img-${object.image}.jpg`, alt="")
+						h3.contact-box__name=object.name
+						.contact-box__position=object.position
+					ul.contact-box__bottom
+						li 
+							span 
+								| тел.:
+							a(href="tel: +99897 125 99 44 ")
+								| +99897 125 99 44 
+						li 
+							span 
+								| email:
+							a(href="mailto: example@mail.com")
+								| example@mail.com
+
+

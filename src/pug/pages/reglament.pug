@@ -1,0 +1,58 @@
+//- main.home
+//- 	+lazyPicture({
+//- 		src: `${baseDir}images/mem.jpg`,
+//- 		alt: 'Мемчик',
+//- 	}).home__picture#hello
+
+//- 	p.home__text#necessarily
+//- 		| Это стартовый шаблон для верстки!
+//- 		br
+//- 		br
+//- 		| Обязательно посмотри реализацию:
+//- 		br
+//- 		| pug в папке #[code pug/(components|pages)],
+//- 		br
+//- 		| js в папке #[code js/(components|modules|pages)],
+//- 		br
+//- 		| scss в папке #[code scss/(components|pages)]
+//- 		br
+//- 		br
+//- 		| Не используемые части кода/компонентов можно просто отключить (удалять не рекомендуется)
+//- 		br
+//- 		br
+//- 		| Не забывай читать #[a(href="https://github.com/ninelines-team/ninelines-docs" target="_blank") документацию]!
+
+//- 	//- picture.home__picture.home__picture--2#bye
+//- 	+lazyPicture({
+//- 		src: `${baseDir}images/mem-2.jpg`,
+//- 		alt: 'Мемчик 2',
+//- 	}, [
+//- 		{
+//- 			srcset: `${baseDir}images/mem-2.jpg`,
+//- 		}
+//- 	]).home__picture.home__picture--2#bye
+
+
+
+
+
+
+.page-wrapper.inner-page
+	h1.font-size-24.inner-page__title.mb-32 Регламент и правила
+	.box-default.padding-24.files
+		a(href="#").file-box.padding-16.bd-radius-12
+			.file-box__icon 
+				+svg("download")
+			h3.file-box__title
+				| Регламент компании 
+		a(href="#").file-box.padding-16.bd-radius-12
+			.file-box__icon 
+				+svg("download")
+			h3.file-box__title
+				| Дресс код
+		a(href="#").file-box.padding-16.bd-radius-12
+			.file-box__icon 
+				+svg("download")
+			h3.file-box__title
+				| Регламент компании 2	
+

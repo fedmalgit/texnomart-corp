@@ -1,0 +1,64 @@
+.otdel-box {
+	padding: 22px 24px 24px;
+	height: 170px;
+	display: flex;
+	flex-direction: column;
+	@include max-lg {
+		height: auto;
+		padding: 20px;
+	}
+}
+
+.otdel-box__name {
+	margin-bottom: 14px;
+	font-size: 18px;
+	line-height: 110%;
+	a {
+		color: $textcolor;
+	}
+}
+
+.otdel-box__stack {
+	display: flex;
+	flex-grow: 1;
+	@include max-md {
+		padding: 16px 0 24px;
+	}
+	.otdel-box__avatar {
+		&:not(:first-child) {
+			margin-left: -10px;
+		}
+		&.otdel-box_lead {
+			margin-right: 20px;
+			border-color: $accent;
+		}
+	}
+}
+
+.otdel-box__avatar {
+	text-align: center;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 20px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.otdel-box__bottom {
+	display: flex;
+	align-items: flex-end;
+	margin-top: auto;
+	@include max-md {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.otdel-box__btn {
+	@include max-md {
+		display: block;
+		width: 100%;
+	}
+}
